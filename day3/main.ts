@@ -8,7 +8,6 @@ function part1() {
   );
 
   for (const item of regexResult) {
-    console.log(item[0], +item[1], +item[2]);
     sum += +item[1] * +item[2];
   }
 
@@ -27,11 +26,8 @@ function part2() {
   let enabled = true;
   for (const item of regexResult) {
     const isMul = item[0][0] === "m";
-
     const isDo = item[0] === "do()";
     const isDont = item[0] === "don't()";
-
-    console.log(item[0], isMul, isDo, isDont);
 
     if (isDo) enabled = true;
     if (isDont) enabled = false;
